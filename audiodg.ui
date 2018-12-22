@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="solverButton">
     <property name="geometry">
      <rect>
-      <x>397</x>
-      <y>8</y>
+      <x>296</x>
+      <y>10</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -63,6 +63,25 @@
       <width>471</width>
       <height>131</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="trayButton">
+    <property name="geometry">
+     <rect>
+      <x>396</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tray Mod</string>
     </property>
    </widget>
   </widget>

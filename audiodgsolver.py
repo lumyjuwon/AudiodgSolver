@@ -1,6 +1,7 @@
-from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 from functools import partial
 import webbrowser
 import sys
@@ -31,8 +32,9 @@ class SolveThread(QThread):
                         ps = psutil.Process(proc.pid)
                         process_percent = round(ps.cpu_percent(interval=1) / psutil.cpu_count(), 2)
                         status = "Name: " + proc.name() + "  " + "PID: " + str(proc.pid) + "  " + "CPU: " + str(process_percent) + "  " "Time: " + str(datetime.now())
+                        print(status)
                         self.process_status.emit(status)
-                        if process_percent > 8:
+                        if process_percent > 6:
                             try:
                                 os.system("taskkill /f /pid %i" %proc.pid)
                                 kill_log = "audiodg.exe is killed"
@@ -55,6 +57,7 @@ class MyWindow(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle("Audiogdg Solver")
+        self.setWindowIcon(QIcon('audios.png'))
         self.start_status = False
         self.confirm_administrator()
 
@@ -65,13 +68,28 @@ class MyWindow(QMainWindow, form_class):
         self.solve_thread.process_kill_log.connect(self.add_status_to_listview)
 
         self.solverButton.clicked.connect(self.start_solve)
+        self.trayButton.clicked.connect(self.tray_mod)
         self.actionGithub.triggered.connect(partial(self.open_url, self.github_url))
+
+        # Tray System
+        self.icon = QIcon("audio.png")
+        self.tray = QSystemTrayIcon()
+        self.tray.activated.connect(self.tray_click)
 
     def confirm_administrator(self):
         if ctypes.windll.shell32.IsUserAnAdmin():
             self.add_status_to_listview('관리자 권한으로 실행된 프로세스입니다.')
         else:
             self.add_status_to_listview('일반 권한으로 실행된 프로세스입니다. 관리자 권한으로 실행하시기 바랍니다.')
+
+    def tray_click(self):
+        myWindow.setVisible(True)
+        self.tray.setVisible(False)
+
+    def tray_mod(self):
+        self.tray.setIcon(self.icon)
+        myWindow.setVisible(False)
+        self.tray.setVisible(True)
 
     def start_solve(self):
         if not self.start_status:
