@@ -1,4 +1,4 @@
-# AudiodgSolver
+# Audiodg Solver
 Audiodg Solver solves audiodg.exe process bugs
 
 # Logic Solveing Audiodg.exe Porcess Bug 
