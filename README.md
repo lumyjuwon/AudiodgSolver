@@ -34,7 +34,7 @@ Minimized Program
 # Logic Solveing Audiodg.exe Porcess Bug 
 
 * 1. Detect the audiodg.exe process within user's process list
-* 2. Find out the audiodg.exe process PID
+* 2. Find the audiodg.exe process PID
 * 3. Measure CPU of the PID
 * 4. If CPU of the PID exceeded the 6% share This kill the process
 * 5. Automatically running the audiodg.exe process again
