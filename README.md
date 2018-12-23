@@ -1,7 +1,7 @@
 # Audiodg Solver
 Audiodg Solver solves audiodg.exe process bugs
 
-# Logic Solveing Audiodg.exe Porcess Bug 
+# Logic Solving Audiodg.exe Porcess Bug 
 
 * 1 . Detect the audiodg.exe process within user's process list
 * 2 . Find the audiodg.exe process PID
