@@ -44,3 +44,6 @@ If you want to minimize this you can use the traymod by clicking the "Tray Mod" 
 
 Minimized Program
 
+# How to compile
+
+you just compile audiodgsolver.py
