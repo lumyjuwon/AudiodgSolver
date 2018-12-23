@@ -14,7 +14,6 @@ import os
 
 class SolveThread(QThread):
     process_status = pyqtSignal(str)
-    process_kill_log = pyqtSignal(str)
 
     def __init__(self):
         QThread.__init__(self)
@@ -38,10 +37,10 @@ class SolveThread(QThread):
                             try:
                                 os.system("taskkill /f /pid %i" %proc.pid)
                                 kill_log = "audiodg.exe is killed"
-                                self.process_kill_log.emit(kill_log)
+                                self.process_status.emit(kill_log)
                             except Exception as ex:
                                 error_log = "you should run this program as administrator"
-                                self.process_kill_log.emit(error_log)
+                                self.process_status.emit(error_log)
                             break
                         sleep(3)
                     except Exception:
@@ -65,7 +64,6 @@ class MyWindow(QMainWindow, form_class):
 
         self.solve_thread = SolveThread()
         self.solve_thread.process_status.connect(self.add_status_to_listview)
-        self.solve_thread.process_kill_log.connect(self.add_status_to_listview)
 
         self.solverButton.clicked.connect(self.start_solve)
         self.trayButton.clicked.connect(self.tray_mod)
