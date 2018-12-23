@@ -1,6 +1,19 @@
 # AudiodgSolver
 Audiodg Solver solves audiodg.exe process bugs
 
+# Logic Solveing Audiodg.exe Porcess Bug 
+
+* 1 . Detect the audiodg.exe process within user's process list
+* 2 . Find the audiodg.exe process PID
+* 3 . Measure CPU of the PID
+* 4 . If CPU of the PID exceeded the 6% share This kill the process
+* 5 . Automatically running the audiodg.exe process again
+
+# User Python Package
+
+* psutil
+* pyqt5
+
 # How to use this
 
 Firstly, Download Audiodg Solver at the Link.
@@ -31,10 +44,3 @@ If you want to minimize this you can use the traymod by clicking the "Tray Mod" 
 
 Minimized Program
 
-# Logic Solveing Audiodg.exe Porcess Bug 
-
-* 1. Detect the audiodg.exe process within user's process list
-* 2. Find the audiodg.exe process PID
-* 3. Measure CPU of the PID
-* 4. If CPU of the PID exceeded the 6% share This kill the process
-* 5. Automatically running the audiodg.exe process again
