@@ -3,11 +3,11 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from functools import partial
+from time import sleep
+from datetime import datetime
 import webbrowser
 import sys
 import psutil
-from time import sleep
-from datetime import datetime
 import ctypes
 import os
 
