@@ -46,4 +46,4 @@ Minimized Program
 
 # How to compile
 
-you just compile audiodgsolver.py
+You just compile audiodgsolver.py
