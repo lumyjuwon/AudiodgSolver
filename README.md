@@ -14,7 +14,7 @@ Audiodg Solver solves audiodg.exe process bugs
 * psutil
 * pyqt5
 
-# How to use this
+# How to use
 
 Firstly, Download Audiodg Solver at the Link.
 
