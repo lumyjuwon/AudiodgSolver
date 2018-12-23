@@ -56,7 +56,7 @@ class MyWindow(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle("Audiogdg Solver")
-        self.setWindowIcon(QIcon('audios.png'))
+        self.setWindowIcon(QIcon('icon\\audios.png'))
         self.start_status = False
         self.confirm_administrator()
 
@@ -70,7 +70,7 @@ class MyWindow(QMainWindow, form_class):
         self.actionGithub.triggered.connect(partial(self.open_url, self.github_url))
 
         # Tray System
-        self.icon = QIcon("audio.png")
+        self.icon = QIcon("icon\\audio.png")
         self.tray = QSystemTrayIcon()
         self.tray.activated.connect(self.tray_click)
 
