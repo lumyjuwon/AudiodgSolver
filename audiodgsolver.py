@@ -78,9 +78,9 @@ class MyWindow(QMainWindow, form_class):
 
     def confirm_administrator(self):
         if ctypes.windll.shell32.IsUserAnAdmin():
-            self.add_status_to_listview('관리자 권한으로 실행된 프로세스입니다.')
+            self.add_status_to_listview('This program has been run with an adminstrator')
         else:
-            self.add_status_to_listview('일반 권한으로 실행된 프로세스입니다. 관리자 권한으로 실행하시기 바랍니다.')
+            self.add_status_to_listview('This program has been run with a noraml. run this program as an adminstator.')
 
     def tray_click(self):
         myWindow.setVisible(True)
