@@ -46,4 +46,8 @@ Minimized Program
 
 # How to compile
 
-You just compile audiodgsolver.py
+You just execute audiodgsolver.py
+
+# Where this program was used ?
+
+http://www.inven.co.kr/board/black/3584/40676?name=nicname&keyword=RockMine
