@@ -18,7 +18,7 @@ Audiodg Solver solves audiodg.exe process bugs
 
 Firstly, Download Audiodg Solver at the Link.
 
-( Link: https://drive.google.com/ucauthuser=0&id=1hBdsRpIdK76ZO9JOEFGhDGxcW6REpeo0&export=download ) 
+( Link: https://drive.google.com/a/pearlabyss.com/uc?id=1hBdsRpIdK76ZO9JOEFGhDGxcW6REpeo0&export=download ) 
 
 ![ex_screenshot](./img/img0.PNG)
 
